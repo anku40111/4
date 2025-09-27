@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Life Insurance Guide - Expert Tips & Advice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            width: 250px;
+        }
+
+        .search-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #e55a2b;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background: #1e3a5f;
+            padding: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0;
+        }
+
+        .nav-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: #2c5aa0;
+            border-bottom-color: #ff6b35;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 15px 20px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Main Content Styles */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            padding: 30px 0;
+        }
+
+        .content {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .section {
+            display: none;
+            padding: 30px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h2 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+
+        /* Featured Article Styles */
+        .featured-article {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-article h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .featured-article p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Article Grid Styles */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-card-content {
+            padding: 20px;
+        }
+
+        .article-card h3 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .article-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-section h3 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item a {
+            color: #2c5aa0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .news-item a:hover {
+            color: #ff6b35;
+        }
+
+        .news-date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* Newsletter Styles */
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .newsletter-form input {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #2c5aa0;
+        }
+
+        .newsletter-form button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: #e55a2b;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .close:hover {
+            opacity: 0.7;
+        }
+
+        .modal-body {
+            padding: 30px;
+            line-height: 1.8;
+        }
+
+        .modal-body h3 {
+            color: #2c5aa0;
+            margin: 25px 0 15px 0;
+            font-size: 1.3rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .modal-body ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .modal-body li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-box {
+                width: 200px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1e3a5f;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #2c5aa0;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+
+            .modal-body {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .featured-article {
+                padding: 20px;
+            }
+
+            .article-card-content {
+                padding: 15px;
+            }
+
+            .sidebar-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Senior Life Insurance Guide</div>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search insurance topics...">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="term-life">Term Life</a></li>
+                    <li><a href="#" class="nav-link" data-section="whole-life">Whole Life</a></li>
+                    <li><a href="#" class="nav-link" data-section="final-expense">Final Expense</a></li>
+                    <li><a href="#" class="nav-link" data-section="medicare">Medicare Supplement</a></li>
+                    <li><a href="#" class="nav-link" data-section="planning">Planning Guide</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <div class="content">
+                 
+                <section id="home" class="section active">
+                    <h2>Life Insurance for Seniors: Your Complete Guide</h2>
+                    
+                    <div class="featured-article" data-article="senior-insurance-guide">
+                        <h3>The Ultimate Senior Life Insurance Guide for 2024</h3>
+                        <p>Discover the best life insurance options for seniors over 50, 60, and 70. Learn about guaranteed acceptance policies, medical exams, and how to secure affordable coverage in your golden years.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="term-vs-whole">
+                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Senior couple reviewing insurance documents">
+                            <div class="article-card-content">
+                                <h3>Term vs. Whole Life Insurance for Seniors</h3>
+                                <p>Understanding the key differences between term and whole life insurance policies and which option works best for seniors at different life stages.</p>
+                                <div class="article-meta">
+                                    <span>Insurance Expert</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="no-medical-exam">
+                            <img src="https://www.shutterstock.com/image-photo/hand-turns-dice-changes-expression-260nw-1770695492.jpg" alt="Senior man with doctor">
+                            <div class="article-card-content">
+                                <h3>No Medical Exam Life Insurance Options</h3>
+                                <p>Explore guaranteed acceptance and simplified issue life insurance policies that don't require medical exams, perfect for seniors with health concerns.</p>
+                                <div class="article-meta">
+                                    <span>Health Insurance Specialist</span>
+                                    <span>7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="affordable-coverage">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Calculator and money">
+                            <div class="article-card-content">
+                                <h3>Finding Affordable Life Insurance After 65</h3>
+                                <p>Practical strategies to secure affordable life insurance coverage for seniors over 65, including tips for lowering premiums and maximizing benefits.</p>
+                                <div class="article-meta">
+                                    <span>Financial Advisor</span>
+                                    <span>6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+ 
+            
+                <section id="term-life" class="section">
+                    <h2>Term Life Insurance for Seniors</h2>
+                    
+                    <div class="featured-article" data-article="senior-term-life">
+                        <h3>Term Life Insurance: Is It Right for Seniors?</h3>
+                        <p>Learn when term life insurance makes sense for seniors, including coverage options, premium costs, and conversion features that protect your future insurability.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="term-life-benefits">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Financial planning documents">
+                            <div class="article-card-content">
+                                <h3>Benefits of Term Life for Seniors</h3>
+                                <p>Discover the advantages of term life insurance for seniors, including lower initial premiums and flexible coverage periods.</p>
+                                <div class="article-meta">
+                                    <span>Insurance Analyst</span>
+                                    <span>4 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="term-conversion">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Senior man thinking">
+                            <div class="article-card-content">
+                                <h3>Converting Term to Permanent Insurance</h3>
+                                <p>Understanding conversion options and when it makes sense to convert your term policy to permanent life insurance as you age.</p>
+                                <div class="article-meta">
+                                    <span>Policy Expert</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            
+                <section id="whole-life" class="section">
+                    <h2>Whole Life Insurance for Seniors</h2>
+                    
+                    <div class="featured-article" data-article="whole-life-seniors">
+                        <h3>Whole Life Insurance: Building Cash Value in Your Golden Years</h3>
+                        <p>Explore how whole life insurance can provide lifelong coverage and build cash value that seniors can access for emergencies or supplemental retirement income.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="cash-value-benefits">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Money and calculator">
+                            <div class="article-card-content">
+                                <h3>Using Cash Value for Retirement</h3>
+                                <p>Learn how to leverage the cash value component of whole life insurance to supplement your retirement income and cover unexpected expenses.</p>
+                                <div class="article-meta">
+                                    <span>Retirement Specialist</span>
+                                    <span>6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="premium-payments">
+                            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Senior woman with documents">
+                            <div class="article-card-content">
+                                <h3>Managing Premium Payments as a Senior</h3>
+                                <p>Strategies for managing whole life insurance premiums on a fixed income, including paid-up options and premium financing.</p>
+                                <div class="article-meta">
+                                    <span>Financial Planner</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            
+                <section id="final-expense" class="section">
+                    <h2>Final Expense Insurance</h2>
+                    
+                    <div class="featured-article" data-article="final-expense-guide">
+                        <h3>Final Expense Insurance: Protecting Your Family from Burial Costs</h3>
+                        <p>Understanding final expense insurance policies designed specifically to cover funeral costs, medical bills, and other end-of-life expenses without burdening your family.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="burial-insurance">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Peaceful cemetery">
+                            <div class="article-card-content">
+                                <h3>Burial Insurance vs. Final Expense</h3>
+                                <p>Compare burial insurance and final expense policies to understand which option provides the best coverage for your end-of-life planning needs.</p>
+                                <div class="article-meta">
+                                    <span>End-of-Life Specialist</span>
+                                    <span>4 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="guaranteed-acceptance">
+                            <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Senior couple smiling">
+                            <div class="article-card-content">
+                                <h3>Guaranteed Acceptance Policies</h3>
+                                <p>Learn about guaranteed acceptance life insurance policies that provide coverage regardless of health conditions, with no medical questions asked.</p>
+                                <div class="article-meta">
+                                    <span>Insurance Advisor</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="medicare" class="section">
+                    <h2>Medicare Supplement Insurance</h2>
+                    
+                    <div class="featured-article" data-article="medicare-supplement">
+                        <h3>Medicare Supplement Insurance: Filling the Coverage Gaps</h3>
+                        <p>Discover how Medicare supplement insurance (Medigap) works with your existing Medicare coverage to reduce out-of-pocket healthcare costs in retirement.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="medigap-plans">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Healthcare documents">
+                            <div class="article-card-content">
+                                <h3>Choosing the Right Medigap Plan</h3>
+                                <p>Compare different Medigap plans (A through N) to find the supplement insurance that best fits your healthcare needs and budget.</p>
+                                <div class="article-meta">
+                                    <span>Medicare Expert</span>
+                                    <span>7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="enrollment-periods">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Calendar and pen">
+                            <div class="article-card-content">
+                                <h3>Medicare Enrollment Periods Explained</h3>
+                                <p>Understanding Medicare enrollment periods, including initial enrollment, annual open enrollment, and special enrollment periods.</p>
+                                <div class="article-meta">
+                                    <span>Benefits Counselor</span>
+                                    <span>6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+             
+                <section id="planning" class="section">
+                    <h2>Senior Insurance Planning Guide</h2>
+                    
+                    <div class="featured-article" data-article="comprehensive-planning">
+                        <h3>Comprehensive Insurance Planning for Seniors</h3>
+                        <p>A complete guide to insurance planning in your senior years, covering life insurance, health insurance, long-term care, and disability insurance coordination.</p>
+                    </div>
+
+                    <div class="articles-grid">
+                        <div class="article-card" data-article="long-term-care">
+                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Senior care">
+                            <div class="article-card-content">
+                                <h3>Long-Term Care Insurance Options</h3>
+                                <p>Explore long-term care insurance options for seniors, including traditional policies, hybrid life insurance, and self-insurance strategies.</p>
+                                <div class="article-meta">
+                                    <span>LTC Specialist</span>
+                                    <span>8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-card" data-article="beneficiary-planning">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Family photo">
+                            <div class="article-card-content">
+                                <h3>Beneficiary Designation Best Practices</h3>
+                                <p>Learn how to properly designate and update beneficiaries on your life insurance policies to ensure your benefits reach the right people.</p>
+                                <div class="article-meta">
+                                    <span>Estate Planner</span>
+                                    <span>5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Latest Insurance News</h3>
+                    <div class="news-item">
+                        <a href="https://www.kiplinger.com/retirement/insurance" target="_blank">Medicare Advantage Changes for 2024</a>
+                        <div class="news-date">December 15, 2023</div>
+                    </div>
+                    <div class="news-item">
+                        <a href="https://www.forbes.com/advisor/life-insurance/" target="_blank">Life Insurance Rate Trends for Seniors</a>
+                        <div class="news-date">December 12, 2023</div>
+                    </div>
+                    <div class="news-item">
+                        <a href="https://www.aarp.org/money/investing/info-2023/life-insurance-seniors.html" target="_blank">AARP Guide to Senior Life Insurance</a>
+                        <div class="news-date">December 10, 2023</div>
+                    </div>
+                    <div class="news-item">
+                        <a href="https://www.nerdwallet.com/article/insurance/life-insurance-seniors" target="_blank">Best Life Insurance for Seniors Over 70</a>
+                        <div class="news-date">December 8, 2023</div>
+                    </div>
+                    <div class="news-item">
+                        <a href="https://www.investopedia.com/articles/personal-finance/110815/final-expense-insurance-seniors.asp" target="_blank">Final Expense Insurance Explained</a>
+                        <div class="news-date">December 5, 2023</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Insurance Newsletter</h3>
+                    <p>Get weekly tips on senior insurance planning, policy updates, and money-saving strategies.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe Now</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Quick Insurance Calculator</h3>
+                    <p>Estimate your life insurance needs based on your age, income, and financial obligations.</p>
+                    <button style="background: #2c5aa0; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 10px;">Calculate Coverage</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Insurance Types</h4>
+                    <a href="#">Term Life Insurance</a>
+                    <a href="#">Whole Life Insurance</a>
+                    <a href="#">Final Expense Insurance</a>
+                    <a href="#">Medicare Supplement</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">Insurance Calculator</a>
+                    <a href="#">Policy Comparison Tool</a>
+                    <a href="#">Senior Discounts</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Find an Agent</a>
+                    <a href="#">Claims Support</a>
+                    <a href="#">Policy Management</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
+            <p>&copy; 2023 Senior Life Insurance Guide. All rights reserved. | Providing trusted insurance guidance for seniors nationwide.</p>
+        </footer>
+    </footer>
+
+     Modal 
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Article Title</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                 Article content will be inserted here 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Article content data
+        const articleContent = {
+            'senior-insurance-guide': {
+                title: 'The Ultimate Senior Life Insurance Guide for 2024',
+                content: `
+                    <h3>Why Life Insurance Matters More as You Age</h3>
+                    <p>As you enter your senior years, life insurance becomes increasingly important for protecting your loved ones and ensuring your final expenses are covered. Many seniors mistakenly believe they no longer need life insurance, but the reality is quite different.</p>
+                    
+                    <h3>Types of Life Insurance for Seniors</h3>
+                    <p><strong>Term Life Insurance:</strong> Provides coverage for a specific period (10, 20, or 30 years) with lower initial premiums. Best for seniors with temporary financial obligations like mortgages or dependent children.</p>
+                    
+                    <p><strong>Whole Life Insurance:</strong> Offers lifelong coverage with a cash value component that grows over time. Premiums remain level, and you can borrow against the cash value.</p>
+                    
+                    <p><strong>Final Expense Insurance:</strong> Specifically designed to cover funeral costs, medical bills, and other end-of-life expenses. Usually requires no medical exam and offers guaranteed acceptance.</p>
+                    
+                    <h3>Age-Specific Considerations</h3>
+                    <ul>
+                        <li><strong>Ages 50-60:</strong> Focus on replacing lost income and paying off debts</li>
+                        <li><strong>Ages 60-70:</strong> Transition to covering final expenses and leaving a legacy</li>
+                        <li><strong>Ages 70+:</strong> Emphasize guaranteed acceptance policies and final expense coverage</li>
+                    </ul>
+                    
+                    <h3>Tips for Getting Affordable Coverage</h3>
+                    <p>1. <strong>Shop around:</strong> Compare quotes from multiple insurers as rates can vary significantly.</p>
+                    <p>2. <strong>Consider your health:</strong> Apply while you're still relatively healthy to get better rates.</p>
+                    <p>3. <strong>Choose the right amount:</strong> Don't over-insure or under-insure based on your actual needs.</p>
+                    <p>4. <strong>Work with an agent:</strong> An experienced agent can help navigate the complex senior insurance market.</p>
+                `
+            },
+            'term-vs-whole': {
+                title: 'Term vs. Whole Life Insurance for Seniors',
+                content: `
+                    <h3>Understanding the Fundamental Differences</h3>
+                    <p>Choosing between term and whole life insurance as a senior requires understanding how each type works and which aligns better with your financial goals and current life stage.</p>
+                    
+                    <h3>Term Life Insurance for Seniors</h3>
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>Lower initial premiums make it more affordable on fixed incomes</li>
+                        <li>Simple, straightforward coverage without investment components</li>
+                        <li>Ideal for covering specific debts or obligations with end dates</li>
+                        <li>Some policies offer conversion options to permanent insurance</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>Premiums increase significantly with age at renewal</li>
+                        <li>Coverage may become unaffordable in later years</li>
+                        <li>No cash value accumulation</li>
+                        <li>May expire before you need it most</li>
+                    </ul>
+                    
+                    <h3>Whole Life Insurance for Seniors</h3>
+                    <p><strong>Advantages:</strong></p>
+                    <ul>
+                        <li>Guaranteed lifelong coverage with level premiums</li>
+                        <li>Builds cash value you can borrow against</li>
+                        <li>Provides certainty and peace of mind</li>
+                        <li>Can serve as an emergency fund in retirement</li>
+                    </ul>
+                    
+                    <p><strong>Disadvantages:</strong></p>
+                    <ul>
+                        <li>Much higher premiums, especially when purchased later in life</li>
+                        <li>Complex product with various fees and charges</li>
+                        <li>Cash value growth may be limited</li>
+                        <li>May not be cost-effective if purchased after age 60</li>
+                    </ul>
+                    
+                    <h3>Making the Right Choice</h3>
+                    <p>Consider term life if you have specific financial obligations that will end (like a mortgage) or if you need maximum coverage at the lowest cost. Choose whole life if you want guaranteed lifelong coverage and have the budget for higher premiums.</p>
+                `
+            },
+            'no-medical-exam': {
+                title: 'No Medical Exam Life Insurance Options',
+                content: `
+                    <h3>When Medical Exams Become a Barrier</h3>
+                    <p>As we age, health issues can make it difficult to qualify for traditional life insurance that requires medical exams. Fortunately, there are several no-exam options designed specifically for seniors.</p>
+                    
+                    <h3>Types of No Medical Exam Policies</h3>
+                    
+                    <p><strong>Guaranteed Acceptance Life Insurance:</strong></p>
+                    <ul>
+                        <li>No medical questions or health requirements</li>
+                        <li>Available to anyone within the age limits (usually 45-85)</li>
+                        <li>Limited coverage amounts (typically $5,000-$25,000)</li>
+                        <li>Graded death benefit (limited payouts in first 2-3 years)</li>
+                        <li>Higher premiums due to increased risk</li>
+                    </ul>
+                    
+                    <p><strong>Simplified Issue Life Insurance:</strong></p>
+                    <ul>
+                        <li>Requires answering health questions but no medical exam</li>
+                        <li>Faster approval process (often within days)</li>
+                        <li>Higher coverage limits than guaranteed acceptance</li>
+                        <li>Better rates for those in good health</li>
+                        <li>May still deny coverage based on health answers</li>
+                    </ul>
+                    
+                    <h3>Who Should Consider No-Exam Policies</h3>
+                    <ul>
+                        <li>Seniors with serious health conditions</li>
+                        <li>Those who want quick approval</li>
+                        <li>People who need modest coverage amounts</li>
+                        <li>Individuals who have been declined for traditional coverage</li>
+                    </ul>
+                    
+                    <h3>Important Considerations</h3>
+                    <p><strong>Graded Death Benefits:</strong> Many guaranteed acceptance policies only pay partial benefits if you die within the first 2-3 years (except for accidental death).</p>
+                    
+                    <p><strong>Higher Costs:</strong> No-exam policies typically cost 2-3 times more than traditional policies due to the increased risk insurers assume.</p>
+                    
+                    <p><strong>Limited Coverage:</strong> Coverage amounts are usually capped at $25,000-$50,000, which may not meet all your needs.</p>
+                    
+                    <h3>Tips for Applying</h3>
+                    <p>1. Compare multiple insurers as acceptance criteria vary</p>
+                    <p>2. Be honest on health questionnaires to avoid claim denials</p>
+                    <p>3. Consider the waiting period and how it affects your beneficiaries</p>
+                    <p>4. Understand exactly what is and isn't covered</p>
+                `
+            },
+            'affordable-coverage': {
+                title: 'Finding Affordable Life Insurance After 65',
+                content: `
+                    <h3>The Challenge of Senior Life Insurance Costs</h3>
+                    <p>Life insurance premiums increase significantly with age, making coverage expensive for seniors. However, with the right strategies, you can still find affordable options that meet your needs.</p>
+                    
+                    <h3>Strategies for Lower Premiums</h3>
+                    
+                    <p><strong>1. Buy Only What You Need</strong></p>
+                    <ul>
+                        <li>Calculate your actual coverage needs (final expenses, debts, legacy goals)</li>
+                        <li>Don't over-insure based on outdated income replacement formulas</li>
+                        <li>Consider decreasing coverage as debts are paid off</li>
+                    </ul>
+                    
+                    <p><strong>2. Improve Your Health Profile</strong></p>
+                    <ul>
+                        <li>Quit smoking (rates drop significantly after 12 months)</li>
+                        <li>Manage chronic conditions like diabetes and high blood pressure</li>
+                        <li>Maintain a healthy weight and exercise regularly</li>
+                        <li>Schedule your medical exam when you're feeling your best</li>
+                    </ul>
+                    
+                    <p><strong>3. Shop Multiple Insurers</strong></p>
+                    <ul>
+                        <li>Each company has different underwriting guidelines</li>
+                        <li>Some specialize in covering seniors or specific health conditions</li>
+                        <li>Rates can vary by 50% or more between companies</li>
+                        <li>Work with an independent agent who represents multiple insurers</li>
+                    </ul>
+                    
+                    <p><strong>4. Consider Alternative Policy Types</strong></p>
+                    <ul>
+                        <li>Final expense insurance for basic coverage needs</li>
+                        <li>Group life insurance through associations or employers</li>
+                        <li>Accidental death policies as supplemental coverage</li>
+                        <li>Guaranteed universal life for permanent coverage</li>
+                    </ul>
+                    
+                    <h3>Timing Your Application</h3>
+                    <p>The best time to apply for life insurance is while you're still healthy. Even a minor health issue can significantly increase premiums or lead to denial. Don't wait until you "need" the insurance.</p>
+                    
+                    <h3>Working with Limited Budgets</h3>
+                    <p>If traditional coverage is too expensive:</p>
+                    <ul>
+                        <li>Start with a smaller policy and increase coverage later if possible</li>
+                        <li>Consider term life insurance for temporary needs</li>
+                        <li>Look into guaranteed acceptance policies for basic coverage</li>
+                        <li>Explore pre-need funeral insurance as an alternative</li>
+                    </ul>
+                    
+                    <h3>Red Flags to Avoid</h3>
+                    <ul>
+                        <li>Policies marketed through direct mail or TV ads</li>
+                        <li>Companies that don't allow you to speak with an agent</li>
+                        <li>Policies with extremely high premiums relative to benefits</li>
+                        <li>Companies with poor financial ratings or customer service</li>
+                    </ul>
+                `
+            }
+        };
+
+        // DOM elements
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        const articleCards = document.querySelectorAll('.article-card, .featured-article');
+        const modal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const closeBtn = document.querySelector('.close');
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const searchBtn = document.querySelector('.search-btn');
+        const searchBox = document.querySelector('.search-box');
+        const newsletterForm = document.querySelector('.newsletter-form');
+
+        // Navigation functionality
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links and sections
+                navLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show corresponding section
+                const sectionId = link.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Close mobile menu
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Mobile menu toggle
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Article modal functionality
+        articleCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const articleId = card.getAttribute('data-article');
+                const article = articleContent[articleId];
+                
+                if (article) {
+                    modalTitle.textContent = article.title;
+                    modalBody.innerHTML = article.content;
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close modal functionality
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Search functionality
+        searchBtn.addEventListener('click', () => {
+            const searchTerm = searchBox.value.toLowerCase().trim();
+            if (searchTerm) {
+                alert(`Searching for: "${searchTerm}"\n\nThis would typically search through all articles and display relevant results.`);
+            }
+        });
+
+        searchBox.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+
+        // Newsletter form
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with email: ${email}\n\nYou'll receive weekly senior insurance tips and updates!`);
+            e.target.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        // Add loading animation for external links
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', () => {
+                link.style.opacity = '0.7';
+                setTimeout(() => {
+                    link.style.opacity = '1';
+                }, 1000);
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure home section is active on load
+            document.getElementById('home').classList.add('active');
+            document.querySelector('.nav-link[data-section="home"]').classList.add('active');
+        });
+    </script>
+</body>
+</html>
